@@ -5,7 +5,7 @@ Peter:
 - Create a Java client for the VerificationService
 
 Oliver:
-- 
+- Update task manager xml.
 
 ???:
-TaskManager.java
+- Create TaskManager.java
