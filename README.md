@@ -3,15 +3,21 @@ MDS-handin-6
 
 [__Formal Verification__](https://blog.itu.dk/SMDS-E2012/course-plan-and-curriculum/mandatory-assignment-6/)
 
+##Progress
 
-Helena:
+**Done:**
+- Extend task manager xml.
+- Create a Java client, 'VerificationClient.java',  for the VerificationService
+
+**Helena:**
 - Create a Java client for the TaskmanagerHelperService
 
-Peter:
-- Create a Java client for the VerificationService
+**Oliver:**
+- Port and update relevant serialization classes.
 
-Oliver:
-- Update task manager xml.
+**Peter:**
 
-???:
-- Create TaskManager.java
+**Bjørn:**
+
+**Anyone:**
+- Implement TaskManager.java
