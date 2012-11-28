@@ -42,5 +42,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
         <delete dir="${build.generated.dir}/jax-wsCache/VerificationService"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-VerificationService"/>
+    <target name="wsimport-client-TaskmanagerHelperService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/TaskmanagerHelperService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/TaskmanagerHelperService" destdir="${build.generated.dir}/jax-wsCache/TaskmanagerHelperService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/TaskmanagerHelperService/wsdl/trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/TaskmanagerHelperService/wsdl/trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/TaskmanagerHelperService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/TaskmanagerHelperService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-TaskmanagerHelperService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/TaskmanagerHelperService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-VerificationService, wsimport-client-TaskmanagerHelperService"/>
 </project>

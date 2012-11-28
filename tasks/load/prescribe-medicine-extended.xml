@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal>
+    <tasks name="prescribe-medicine-extended">
+        <task id="pm" name="prescribe medicine" date="" status="not-executed" required="false">
+            <description>
+                Prescription of medicine by the doctor.
+            </description>
+            <attendants>doctor</attendants>
+            <conditions>er</conditions>
+            <responses>sn, gm</responses>
+        </task>
+        <task id="sn" name="sign" date="" status="not-executed" required="false">
+            <description>
+                Sign by the doctor for the prescription.
+            </description>
+            <attendants>doctor</attendants>
+            <conditions>pm, ot</conditions>
+            <responses>pt</responses>
+        </task>
+        <task id="gm" name="give medicine" date="" status="not-executed" required="false">
+            <description>
+                Nurse admistering medicine to patient.
+            </description>
+            <attendants>nurse</attendants>
+            <conditions>sn</conditions>
+            <responses></responses>
+        </task>
+        <task id="dt" name="don't trust" date="" status="not-executed" required="false">
+            <description>
+                Nurse does not trust the prescription.
+            </description>
+            <attendants>nurse</attendants>
+            <conditions>sn</conditions>
+            <responses></responses>
+        </task>
+		<task id="ot" name="order test" date="" status="not-executed" required="false">
+			<description>
+				The doctor orders a test.
+			</description>
+			<attendants>doctor</attendants>
+			<conditions></conditions>
+			<responses>sn, er</responses>
+		</task>
+		<task id="pt" name="perform test" date="" status="not-executed" required="false">
+			<description>
+				The nurse performs a test.
+			</description>
+			<attendants>nurse</attendants>
+			<conditions>sn</conditions>
+			<responses></responses>
+		</task>
+		<task id="er" name="examine results" date="" status="not-executed" required="false">
+			<description>
+				The doctor examines the test results.
+			</description>
+			<attendants>doctor</attendants>
+			<conditions>pt</conditions>
+			<responses></responses>
+		</task>
+    </tasks>
+</cal>

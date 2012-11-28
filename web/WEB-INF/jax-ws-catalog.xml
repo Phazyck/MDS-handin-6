@@ -4,4 +4,8 @@
     <system systemId="http://trustcare.itu.dk/DCRGraphVerificationServices/VerificationService.svc?xsd=xsd0" uri="wsdl/trustcare.itu.dk/DCRGraphVerificationServices/VerificationService.svc.xsd_xsd0.xsd"/>
     <system systemId="http://trustcare.itu.dk/DCRGraphVerificationServices/VerificationService.svc?xsd=xsd1" uri="wsdl/trustcare.itu.dk/DCRGraphVerificationServices/VerificationService.svc.xsd_xsd1.xsd"/>
     <system systemId="http://trustcare.itu.dk/DCRGraphVerificationServices/VerificationService.svc?xsd=xsd2" uri="wsdl/trustcare.itu.dk/DCRGraphVerificationServices/VerificationService.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc?wsdl" uri="wsdl/trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc.wsdl"/>
+    <system systemId="http://trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc?wsdl=wsdl0" uri="wsdl/trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc.wsdl_wsdl0.wsdl"/>
+    <system systemId="http://trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc?xsd=xsd0" uri="wsdl/trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc?xsd=xsd1" uri="wsdl/trustcare.itu.dk/DCRGraphVerificationServices/TaskmanagerHelperService.svc.xsd_xsd1.xsd"/>
 </catalog>
