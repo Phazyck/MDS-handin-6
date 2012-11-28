@@ -1,0 +1,30 @@
+<dcrgVerificationResult timestamp="2012-11-28T14:34:40.4207312+01:00">
+  <verificationTime>00:00:00 (hh:mm:ss)</verificationTime>
+  <dcrgModel name="prescribe-medicine-extended">
+    <propertyResult>
+      <propertyType>DeadlockFree</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <propertyResult>
+      <propertyType>Liveness</propertyType>
+      <isValid>false</isValid>
+      <message>The SCC with path:s1,s1 is not accepting due to leftover pending responses: er,sn</message>
+    </propertyResult>
+    <verificationStatistics>
+      <totalStateCount>2</totalStateCount>
+      <reachableStateCount>2</reachableStateCount>
+      <transitionsCount>2</transitionsCount>
+      <averageStateMemory>2.672 kb</averageStateMemory>
+      <totalStateMemory>5.344 kb</totalStateMemory>
+      <totalProgramMemory>13.292 mb</totalProgramMemory>
+    </verificationStatistics>
+    <statespaceInDotFormat><![CDATA[digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0" [ label = "s0{}"]; 
+"s1" [ label = "s1{er,sn}", color = red]; 
+"s0" -> "s1"[label = "ot"]; 
+"s1" -> "s1"[label = "ot", color = red ]; 
+}]]></statespaceInDotFormat>
+  </dcrgModel>
+</dcrgVerificationResult>

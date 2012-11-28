@@ -1,54 +1,48 @@
 package taskmanager;
 
+import clients.*;
 import java.io.*;
 import javax.xml.bind.JAXBException;
 import static xml.Serializer.*;
 import xml.tasks.*;
 
-public class TaskManager {
+public final class TaskManager implements Runnable {
 
-    public static void main(String[] args) {
-        TaskManager tm = new TaskManager();
-
-        try {
-            System.out.println(serialize(tm.cal.tasks));
-        } catch (JAXBException ex) {
-            System.out.println(ex);
-        }
-
+    public static void main(String[] args) throws Exception {
+        Thread t = new Thread(new TaskManager());
+        t.start();
     }
-    private static final String load = "./tasks/load/prescribe-medicine-extended.xml";
-    private static final String save = "./tasks/save/prescribe-medicine-extended.xml";
-    private static final boolean resume = false;
-    public Cal cal;
+    private static final String dir = "./files/";
+    private static final String tmXml = "prescribe-medicine-extended.xml";
+    private Cal cal;
 
-    public TaskManager() {
-        loadCal();
-        saveCal();
-    }
-
-    private void loadCal() {        
-        try (FileInputStream stream = new FileInputStream(resume ? save : load)) {
+    public TaskManager() throws IOException, JAXBException {
+        try (FileInputStream stream = new FileInputStream(dir + tmXml)) {
             javax.xml.bind.JAXBContext context = javax.xml.bind.JAXBContext.newInstance(Cal.class);
             cal = (Cal) context.createUnmarshaller().unmarshal(stream);
-        } catch (JAXBException | IOException ex) {
-            cal = new Cal();
         }
     }
 
-    private void saveCal() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(save)))) {
-            writer.write(serialize(cal));
-        } catch (JAXBException | IOException ex) {
+    private void writeOut(String file, String contents) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(dir + file)))) {
+            writer.write(contents);
+        } catch (IOException ex) {
             System.out.println(ex);
         }
     }
 
-    public void printCal() {
+    public String verifyDCRGraph() {
         try {
-            System.out.println(serialize(cal));
+            String taskmanagerXml = serialize(cal);
+            String dcrgraphXml = TaskmanagerHelperClient.taskmanagerXmlToDCRGXml(taskmanagerXml);
+            return VerificationClient.verifyDCRGraph(dcrgraphXml);
         } catch (JAXBException ex) {
-            System.out.println(ex);
+            return ex.getMessage();
         }
+    }
+
+    @Override
+    public void run() {
+        writeOut("out.txt", verifyDCRGraph());
     }
 }

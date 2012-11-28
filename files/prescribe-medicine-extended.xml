@@ -31,9 +31,9 @@
             </description>
             <attendants>nurse</attendants>
             <conditions>sn</conditions>
-            <responses></responses>
+            <responses>sn</responses>
         </task>
-		<task id="ot" name="order test" date="" status="not-executed" required="false">
+		<task id="ot" name="order tests" date="" status="not-executed" required="false">
 			<description>
 				The doctor orders a test.
 			</description>
@@ -41,7 +41,7 @@
 			<conditions></conditions>
 			<responses>sn, er</responses>
 		</task>
-		<task id="pt" name="perform test" date="" status="not-executed" required="false">
+		<task id="pt" name="perform tests" date="" status="not-executed" required="false">
 			<description>
 				The nurse performs a test.
 			</description>
