@@ -11,5 +11,6 @@ MDS-handin-6
 - Create a Java client for the TaskmanagerHelperService
 - Port and update relevant serialization classes.
 
-**Anyone:**
-- Implement TaskManager.java
+**TODO:**
+- Fix live lock.
+- Specify a custom property.
