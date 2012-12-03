@@ -4,19 +4,35 @@
 
 __Everything you need to know:__
 
-Not yet ready...
+__*Adopted Design:*__ This project has a rather simple design.
+As usual, we have packages for serialization/deserialization to/from XML.
+Next, we have generated clients for the supplied web services.
+To take care of reading/writing files, we have made a FileOrganizer.
+All of these modules are then used by the TaskManagerVerifier, which can be utilized through the ConsoleVerifier UI.
+
+__*External dependencies:*__ This project has no external dependencies. All imported classes/packages are in the standard JDK.
+
+__*Screen dumps:*__ In the files folder, the input 
+
 
 ##Package Overview
 
 __Brief descriptions of all the packages in the project:__ 
 
-Not yet ready...
+ * __clients:__ Contains clients to the supplied web services.
+ * __util:__ Contains a single utility class, the FileOrganizer.
+ * __verification:__ Contains the main classes for performing model verification.
+ * __xml:__ Contains the core classes necessary for serialization/deserialization to/from XML.
+ * __xml.verification:__ Contains Java class representations of various XML elements appearing in the verification results.
 
 ##The 'files' folder
 
 __The place where all the good stuff gathers:__ 
 
-Not yet ready...
+ * __/example:__ Contains the example task manager from the notes, and related result output.
+ * __/extended:__ Contains the extended task manager from the assignment, and related result output.
+ * __/improved:__ Contains the improved task manager, (based on the extended one), and related result output.
+ * __/properties:__ Contains the properties to verify on a given task manager, and related result output.
 
 ##Execution
 
@@ -24,6 +40,8 @@ __In order to execute and test this project, you should do the following:__
 
  - Run "ConsoleVerification.java".
  - Follow the instructions provided in the console.
+
+__*Post-execution:*__ Depending on which task manager file and property have been used, the corresponding folder, (see 'files' section), will not have several additional files containing the different results.
 
 
 ##The Improved Model
