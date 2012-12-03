@@ -10,10 +10,11 @@ MDS-handin-6
 - Create a Java client, 'VerificationClient.java',  for the VerificationService
 - Create a Java client for the TaskmanagerHelperService
 - Port and update relevant serialization classes.
-
-**TODO:**
 - Fix live lock.
 - Specify a custom property.
+
+**TODO:**
+- Finish README.md.
 
 ##Model Improvement
 The given model has one single entry point, "order tests", since this task is the only one which does not have other tasks as its condition.
