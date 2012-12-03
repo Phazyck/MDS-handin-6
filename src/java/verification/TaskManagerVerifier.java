@@ -35,12 +35,8 @@ public class TaskManagerVerifier {
             taskFiles.writeFile("-verification.xml", verificationXml);
             // Deserialize the verification result.
             DCRGVerificationResult result = deSerialize(verificationXml, DCRGVerificationResult.class);
-            // Print the results...
-            System.out.println("=== " + result.model.name + " properties ===");
-            for (PropertyResult r : result.model.results) {
-                // ...of each propery check.
-                System.out.println(r.type + ":\n  " + r.isValid + (r.isValid ? "" : " - " + r.message));
-            }
+            // Print the results.
+            printModel(result.model);            
             // Write the statespace to a .dot file.
             taskFiles.writeFile("-statespace.dot", result.model.statespace);
         } catch (Exception ex) {
@@ -81,7 +77,7 @@ public class TaskManagerVerifier {
             taskFiles.writeFile("-verification.xml", verificationXml);
             // Deserialize the verification result.
             DCRGVerificationResult result = deSerialize(verificationXml, DCRGVerificationResult.class);
-            // Display all the different results.
+            // Print all the different results.
             printModel(result.model);
             printModel(result.property);
             printModel(result.composite);
