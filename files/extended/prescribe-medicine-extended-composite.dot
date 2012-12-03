@@ -1,0 +1,7 @@
+digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0+s0" [ label = "s0+s0{}"]; 
+"s1+s0" [ label = "s1+s0{er,sn}", color = red]; 
+"s0+s0" -> "s1+s0"[label = "ot"]; 
+"s1+s0" -> "s1+s0"[label = "ot", color = red ]; 
+}

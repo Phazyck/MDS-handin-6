@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF−8"?> 
+<cal>
+	<tasks name="property−condition−gm−pm">
+		<task id="gm" name="give medicine" date="" status="not−executed" required="false">
+			<description>Nurse admistering medicine to patient.</description>
+			<attendants>nurse</attendants>
+			<conditions>pm</conditions>
+			<responses></responses>
+		</task>
+		<task id="pm" name="prescribe medicine" date="" status="not−executed" required="false">
+			<description>Prescription by the doctor.</description>
+			<attendants>doctor</attendants>
+			<conditions></conditions>
+			<responses></responses>
+		</task>
+	</tasks>
+</cal>

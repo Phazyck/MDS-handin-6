@@ -1,0 +1,109 @@
+<dcrgVerificationResult timestamp="2012-12-03T01:57:22.5400000+01:00">
+  <verificationTime>00:00:00.0010000 (hh:mm:ss)</verificationTime>
+  <dcrgModel name="prescribe-medicine-extended">
+    <propertyResult>
+      <propertyType>DeadlockFree</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <propertyResult>
+      <propertyType>Liveness</propertyType>
+      <isValid>false</isValid>
+      <message>The SCC with path:s1,s1 is not accepting due to leftover pending responses: er,sn</message>
+    </propertyResult>
+    <verificationStatistics>
+      <totalStateCount>2</totalStateCount>
+      <reachableStateCount>2</reachableStateCount>
+      <transitionsCount>2</transitionsCount>
+      <averageStateMemory>2.672 kb</averageStateMemory>
+      <totalStateMemory>5.344 kb</totalStateMemory>
+      <totalProgramMemory>7.657 mb</totalProgramMemory>
+    </verificationStatistics>
+    <statespaceInDotFormat><![CDATA[digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0" [ label = "s0{}"]; 
+"s1" [ label = "s1{er,sn}", color = red]; 
+"s0" -> "s1"[label = "ot"]; 
+"s1" -> "s1"[label = "ot", color = red ]; 
+}]]></statespaceInDotFormat>
+  </dcrgModel>
+  <dcrgProperty name="property−condition−gm−dt">
+    <propertyResult>
+      <propertyType>DeadlockFree</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <propertyResult>
+      <propertyType>Liveness</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <verificationStatistics>
+      <totalStateCount>4</totalStateCount>
+      <reachableStateCount>4</reachableStateCount>
+      <transitionsCount>28</transitionsCount>
+      <averageStateMemory>2.833 kb</averageStateMemory>
+      <totalStateMemory>11.332 kb</totalStateMemory>
+      <totalProgramMemory>7.704 mb</totalProgramMemory>
+    </verificationStatistics>
+    <statespaceInDotFormat><![CDATA[digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0" [ label = "s0{}"]; 
+"s1" [ label = "s1{}"]; 
+"s2" [ label = "s2{}"]; 
+"Er" [ label = "Er{}", color = red]; 
+"s0" -> "s1"[label = "dt"]; 
+"s0" -> "Er"[label = "gm", color = red ]; 
+"s0" -> "s0"[label = "pm"]; 
+"s0" -> "s0"[label = "sn"]; 
+"s0" -> "s0"[label = "ot"]; 
+"s0" -> "s0"[label = "pt"]; 
+"s0" -> "s0"[label = "er"]; 
+"s1" -> "s1"[label = "dt"]; 
+"s1" -> "s2"[label = "gm"]; 
+"s1" -> "s1"[label = "pm"]; 
+"s1" -> "s1"[label = "sn"]; 
+"s1" -> "s1"[label = "ot"]; 
+"s1" -> "s1"[label = "pt"]; 
+"s1" -> "s1"[label = "er"]; 
+"s2" -> "s2"[label = "dt"]; 
+"s2" -> "s2"[label = "gm"]; 
+"s2" -> "s2"[label = "pm"]; 
+"s2" -> "s2"[label = "sn"]; 
+"s2" -> "s2"[label = "ot"]; 
+"s2" -> "s2"[label = "pt"]; 
+"s2" -> "s2"[label = "er"]; 
+"Er" -> "Er"[label = "pm", color = red ]; 
+"Er" -> "Er"[label = "sn", color = red ]; 
+"Er" -> "Er"[label = "gm", color = red ]; 
+"Er" -> "Er"[label = "dt", color = red ]; 
+"Er" -> "Er"[label = "ot", color = red ]; 
+"Er" -> "Er"[label = "pt", color = red ]; 
+"Er" -> "Er"[label = "er", color = red ]; 
+}]]></statespaceInDotFormat>
+  </dcrgProperty>
+  <dcrgComposite name="">
+    <propertyResult>
+      <propertyType>PropertyVerification</propertyType>
+      <isValid>false</isValid>
+      <message>The model does not satisfy the property due to voilations at the following  states! 
+The SCC with path:s1+s0,s1+s0 is not accepting due to leftover pending responses: er,sn
+</message>
+    </propertyResult>
+    <verificationStatistics>
+      <totalStateCount>8</totalStateCount>
+      <reachableStateCount>2</reachableStateCount>
+      <transitionsCount>2</transitionsCount>
+      <averageStateMemory>4.836 kb</averageStateMemory>
+      <totalStateMemory>9.672 kb</totalStateMemory>
+      <totalProgramMemory>7.798 mb</totalProgramMemory>
+    </verificationStatistics>
+    <statespaceInDotFormat><![CDATA[digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0+s0" [ label = "s0+s0{}"]; 
+"s1+s0" [ label = "s1+s0{er,sn}", color = red]; 
+"s0+s0" -> "s1+s0"[label = "ot"]; 
+"s1+s0" -> "s1+s0"[label = "ot", color = red ]; 
+}]]></statespaceInDotFormat>
+  </dcrgComposite>
+</dcrgVerificationResult>

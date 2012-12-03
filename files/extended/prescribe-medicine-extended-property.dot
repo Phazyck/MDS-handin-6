@@ -1,0 +1,35 @@
+digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0" [ label = "s0{}"]; 
+"s1" [ label = "s1{}"]; 
+"s2" [ label = "s2{}"]; 
+"Er" [ label = "Er{}", color = red]; 
+"s0" -> "s1"[label = "dt"]; 
+"s0" -> "Er"[label = "gm", color = red ]; 
+"s0" -> "s0"[label = "pm"]; 
+"s0" -> "s0"[label = "sn"]; 
+"s0" -> "s0"[label = "ot"]; 
+"s0" -> "s0"[label = "pt"]; 
+"s0" -> "s0"[label = "er"]; 
+"s1" -> "s1"[label = "dt"]; 
+"s1" -> "s2"[label = "gm"]; 
+"s1" -> "s1"[label = "pm"]; 
+"s1" -> "s1"[label = "sn"]; 
+"s1" -> "s1"[label = "ot"]; 
+"s1" -> "s1"[label = "pt"]; 
+"s1" -> "s1"[label = "er"]; 
+"s2" -> "s2"[label = "dt"]; 
+"s2" -> "s2"[label = "gm"]; 
+"s2" -> "s2"[label = "pm"]; 
+"s2" -> "s2"[label = "sn"]; 
+"s2" -> "s2"[label = "ot"]; 
+"s2" -> "s2"[label = "pt"]; 
+"s2" -> "s2"[label = "er"]; 
+"Er" -> "Er"[label = "pm", color = red ]; 
+"Er" -> "Er"[label = "sn", color = red ]; 
+"Er" -> "Er"[label = "gm", color = red ]; 
+"Er" -> "Er"[label = "dt", color = red ]; 
+"Er" -> "Er"[label = "ot", color = red ]; 
+"Er" -> "Er"[label = "pt", color = red ]; 
+"Er" -> "Er"[label = "er", color = red ]; 
+}

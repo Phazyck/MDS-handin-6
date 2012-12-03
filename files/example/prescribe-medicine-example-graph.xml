@@ -1,0 +1,65 @@
+<dcrgraph id="-1" name="prescribe-medicine-example" xmlns="http://itu.dk/trustcare/dcrgraphs/2012/">
+  <specification>
+    <resources>
+      <events>
+        <event id="pm" />
+        <event id="sn" />
+        <event id="gm" />
+        <event id="dt" />
+      </events>
+      <labels>
+        <label id="prescribe" />
+        <label id="sign" />
+        <label id="give" />
+        <label id="don't trust" />
+      </labels>
+      <labelMappings>
+        <labelMapping eventId="pm" labelId="prescribe" />
+        <labelMapping eventId="sn" labelId="sign" />
+        <labelMapping eventId="gm" labelId="give" />
+        <labelMapping eventId="dt" labelId="don't trust" />
+      </labelMappings>
+    </resources>
+    <constraints>
+      <conditions>
+        <condition sourceId="pm" targetId="sn" />
+        <condition sourceId="sn" targetId="gm" />
+        <condition sourceId="sn" targetId="dt" />
+      </conditions>
+      <responses>
+        <response sourceId="pm" targetId="sn" />
+        <response sourceId="pm" targetId="gm" />
+        <response sourceId="dt" targetId="sn" />
+      </responses>
+      <includes />
+      <excludes />
+      <milestones>
+        <milestone sourceId="pm" targetId="sn" />
+        <milestone sourceId="sn" targetId="gm" />
+        <milestone sourceId="sn" targetId="dt" />
+      </milestones>
+    </constraints>
+  </specification>
+  <runtime>
+    <executionTrace />
+    <marking>
+      <executed>
+        <event id="pm" />
+      </executed>
+      <included>
+        <event id="pm" />
+        <event id="sn" />
+        <event id="gm" />
+        <event id="dt" />
+      </included>
+      <pendingResponses>
+        <event id="sn" />
+        <event id="gm" />
+      </pendingResponses>
+    </marking>
+    <custom>
+      <stateAccepting>false</stateAccepting>
+      <stateIndex>1</stateIndex>
+    </custom>
+  </runtime>
+</dcrgraph>

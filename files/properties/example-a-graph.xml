@@ -1,0 +1,44 @@
+<dcrgraph id="-1" name="property−condition−gm−pm" xmlns="http://itu.dk/trustcare/dcrgraphs/2012/">
+  <specification>
+    <resources>
+      <events>
+        <event id="gm" />
+        <event id="pm" />
+      </events>
+      <labels>
+        <label id="give medicine" />
+        <label id="prescribe medicine" />
+      </labels>
+      <labelMappings>
+        <labelMapping eventId="gm" labelId="give medicine" />
+        <labelMapping eventId="pm" labelId="prescribe medicine" />
+      </labelMappings>
+    </resources>
+    <constraints>
+      <conditions>
+        <condition sourceId="pm" targetId="gm" />
+      </conditions>
+      <responses />
+      <includes />
+      <excludes />
+      <milestones>
+        <milestone sourceId="pm" targetId="gm" />
+      </milestones>
+    </constraints>
+  </specification>
+  <runtime>
+    <executionTrace />
+    <marking>
+      <executed />
+      <included>
+        <event id="gm" />
+        <event id="pm" />
+      </included>
+      <pendingResponses />
+    </marking>
+    <custom>
+      <stateAccepting>false</stateAccepting>
+      <stateIndex>1</stateIndex>
+    </custom>
+  </runtime>
+</dcrgraph>

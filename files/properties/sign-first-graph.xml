@@ -1,0 +1,54 @@
+<dcrgraph id="-1" name="property-condition-sign-first" xmlns="http://itu.dk/trustcare/dcrgraphs/2012/">
+  <specification>
+    <resources>
+      <events>
+        <event id="so" />
+        <event id="sp" />
+        <event id="gm" />
+        <event id="pt" />
+      </events>
+      <labels>
+        <label id="sign order" />
+        <label id="sign prescription" />
+        <label id="give medicine" />
+        <label id="perform tests" />
+      </labels>
+      <labelMappings>
+        <labelMapping eventId="so" labelId="sign order" />
+        <labelMapping eventId="sp" labelId="sign prescription" />
+        <labelMapping eventId="gm" labelId="give medicine" />
+        <labelMapping eventId="pt" labelId="perform tests" />
+      </labelMappings>
+    </resources>
+    <constraints>
+      <conditions>
+        <condition sourceId="sp" targetId="gm" />
+        <condition sourceId="so" targetId="pt" />
+      </conditions>
+      <responses />
+      <includes />
+      <excludes />
+      <milestones>
+        <milestone sourceId="sp" targetId="gm" />
+        <milestone sourceId="so" targetId="pt" />
+      </milestones>
+    </constraints>
+  </specification>
+  <runtime>
+    <executionTrace />
+    <marking>
+      <executed />
+      <included>
+        <event id="so" />
+        <event id="sp" />
+        <event id="gm" />
+        <event id="pt" />
+      </included>
+      <pendingResponses />
+    </marking>
+    <custom>
+      <stateAccepting>false</stateAccepting>
+      <stateIndex>1</stateIndex>
+    </custom>
+  </runtime>
+</dcrgraph>

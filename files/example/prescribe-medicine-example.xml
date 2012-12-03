@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal>
+	<tasks name="prescribe-medicine-example">
+		<task id="pm" name="prescribe" date="" status="executed" required="false">
+			<description>Prescription by the doctor.</description>
+			<attendants>doctor</attendants>
+			<conditions></conditions>
+			<responses>sn, gm</responses>
+		</task>
+		<task id="sn" name="sign" date="" status="not-executed" required="true">
+			<description>Sign by the doctor.</description>
+			<attendants>doctor</attendants>
+			<conditions>pm</conditions>
+			<responses></responses>
+		</task>
+		<task id="gm" name="give" date="" status="not-executed" required="true">
+			<description>Nurse admistering medicine to patient.</description>
+			<attendants>nurse</attendants>
+			<conditions>sn</conditions>
+			<responses></responses>
+		</task>		
+		<task id="dt" name="don't trust" date="" status="not-executed" required="false">
+			<description>Nurse does not trust the prescription.</description>
+			<attendants>nurse</attendants>
+			<conditions>sn</conditions>
+			<responses>sn</responses>
+		</task>		
+	</tasks>
+</cal>

@@ -1,0 +1,87 @@
+<dcrgraph id="-1" name="prescribe-medicine-solution" xmlns="http://itu.dk/trustcare/dcrgraphs/2012/">
+  <specification>
+    <resources>
+      <events>
+        <event id="pm" />
+        <event id="so" />
+        <event id="sp" />
+        <event id="gm" />
+        <event id="dt" />
+        <event id="ot" />
+        <event id="pt" />
+        <event id="er" />
+      </events>
+      <labels>
+        <label id="prescribe medicine" />
+        <label id="sign order" />
+        <label id="sign prescription" />
+        <label id="give medicine" />
+        <label id="don't trust" />
+        <label id="order tests" />
+        <label id="perform tests" />
+        <label id="examine results" />
+      </labels>
+      <labelMappings>
+        <labelMapping eventId="pm" labelId="prescribe medicine" />
+        <labelMapping eventId="so" labelId="sign order" />
+        <labelMapping eventId="sp" labelId="sign prescription" />
+        <labelMapping eventId="gm" labelId="give medicine" />
+        <labelMapping eventId="dt" labelId="don't trust" />
+        <labelMapping eventId="ot" labelId="order tests" />
+        <labelMapping eventId="pt" labelId="perform tests" />
+        <labelMapping eventId="er" labelId="examine results" />
+      </labelMappings>
+    </resources>
+    <constraints>
+      <conditions>
+        <condition sourceId="er" targetId="pm" />
+        <condition sourceId="ot" targetId="so" />
+        <condition sourceId="pm" targetId="sp" />
+        <condition sourceId="sp" targetId="gm" />
+        <condition sourceId="sp" targetId="dt" />
+        <condition sourceId="so" targetId="pt" />
+        <condition sourceId="pt" targetId="er" />
+      </conditions>
+      <responses>
+        <response sourceId="pm" targetId="sp" />
+        <response sourceId="pm" targetId="gm" />
+        <response sourceId="so" targetId="pt" />
+        <response sourceId="dt" targetId="sp" />
+        <response sourceId="ot" targetId="so" />
+        <response sourceId="ot" targetId="er" />
+      </responses>
+      <includes />
+      <excludes />
+      <milestones>
+        <milestone sourceId="er" targetId="pm" />
+        <milestone sourceId="ot" targetId="so" />
+        <milestone sourceId="pm" targetId="sp" />
+        <milestone sourceId="sp" targetId="gm" />
+        <milestone sourceId="sp" targetId="dt" />
+        <milestone sourceId="so" targetId="pt" />
+        <milestone sourceId="pt" targetId="er" />
+      </milestones>
+    </constraints>
+  </specification>
+  <runtime>
+    <executionTrace />
+    <marking>
+      <executed />
+      <included>
+        <event id="pm" />
+        <event id="so" />
+        <event id="sp" />
+        <event id="gm" />
+        <event id="dt" />
+        <event id="ot" />
+        <event id="pt" />
+        <event id="er" />
+      </included>
+      <pendingResponses />
+    </marking>
+    <custom>
+      <stateAccepting>false</stateAccepting>
+      <stateIndex>1</stateIndex>
+    </custom>
+  </runtime>
+</dcrgraph>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal>
+    <tasks name="property-condition-sign-first">        
+        <task id="so" name="sign order" date="" status="not-executed" required="false">
+			<description>
+                The doctor signs an order for some test.
+			</description>
+			<attendants>doctor</attendants>
+			<conditions></conditions>
+			<responses></responses>
+        </task>
+		<task id="sp" name="sign prescription" date="" status="not-executed" required="false">
+			<description>
+                The doctor signs a prescription.
+			</description>
+			<attendants>doctor</attendants>
+			<conditions></conditions>
+			<responses></responses>
+        </task>
+        <task id="gm" name="give medicine" date="" status="not-executed" required="false">
+			<description>
+                Nurse admistering medicine to patient.
+			</description>
+			<attendants>nurse</attendants>
+			<conditions>sp</conditions>
+			<responses></responses>
+        </task>        
+		<task id="pt" name="perform tests" date="" status="not-executed" required="false">
+			<description>
+				The nurse performs a test.
+			</description>
+			<attendants>nurse</attendants>
+			<conditions>so</conditions>
+			<responses></responses>
+		</task>		
+    </tasks>
+</cal>

@@ -1,0 +1,199 @@
+<dcrgVerificationResult timestamp="2012-12-03T01:57:13.2110000+01:00">
+  <verificationTime>00:00:00.0040000 (hh:mm:ss)</verificationTime>
+  <dcrgModel name="prescribe-medicine-example">
+    <propertyResult>
+      <propertyType>DeadlockFree</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <propertyResult>
+      <propertyType>Liveness</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <verificationStatistics>
+      <totalStateCount>12</totalStateCount>
+      <reachableStateCount>12</reachableStateCount>
+      <transitionsCount>36</transitionsCount>
+      <averageStateMemory>2.674 kb</averageStateMemory>
+      <totalStateMemory>32.086 kb</totalStateMemory>
+      <totalProgramMemory>9.515 mb</totalProgramMemory>
+    </verificationStatistics>
+    <statespaceInDotFormat><![CDATA[digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0" [ label = "s0{gm,sn}"]; 
+"s1" [ label = "s1{gm}"]; 
+"s2" [ label = "s2{gm,sn}"]; 
+"s3" [ label = "s3{gm}"]; 
+"s4" [ label = "s4{}"]; 
+"s5" [ label = "s5{sn}"]; 
+"s6" [ label = "s6{gm,sn}"]; 
+"s7" [ label = "s7{gm}"]; 
+"s8" [ label = "s8{}"]; 
+"s9" [ label = "s9{gm,sn}"]; 
+"s10" [ label = "s10{gm}"]; 
+"s11" [ label = "s11{gm,sn}"]; 
+"s0" -> "s0"[label = "pm"]; 
+"s0" -> "s1"[label = "sn"]; 
+"s1" -> "s2"[label = "dt"]; 
+"s1" -> "s8"[label = "gm"]; 
+"s1" -> "s11"[label = "pm"]; 
+"s1" -> "s1"[label = "sn"]; 
+"s2" -> "s2"[label = "pm"]; 
+"s2" -> "s3"[label = "sn"]; 
+"s3" -> "s2"[label = "dt"]; 
+"s3" -> "s4"[label = "gm"]; 
+"s3" -> "s2"[label = "pm"]; 
+"s3" -> "s3"[label = "sn"]; 
+"s4" -> "s5"[label = "dt"]; 
+"s4" -> "s4"[label = "gm"]; 
+"s4" -> "s6"[label = "pm"]; 
+"s4" -> "s4"[label = "sn"]; 
+"s5" -> "s6"[label = "pm"]; 
+"s5" -> "s4"[label = "sn"]; 
+"s6" -> "s6"[label = "pm"]; 
+"s6" -> "s7"[label = "sn"]; 
+"s7" -> "s6"[label = "dt"]; 
+"s7" -> "s4"[label = "gm"]; 
+"s7" -> "s6"[label = "pm"]; 
+"s7" -> "s7"[label = "sn"]; 
+"s8" -> "s5"[label = "dt"]; 
+"s8" -> "s8"[label = "gm"]; 
+"s8" -> "s9"[label = "pm"]; 
+"s8" -> "s8"[label = "sn"]; 
+"s9" -> "s9"[label = "pm"]; 
+"s9" -> "s10"[label = "sn"]; 
+"s10" -> "s6"[label = "dt"]; 
+"s10" -> "s8"[label = "gm"]; 
+"s10" -> "s9"[label = "pm"]; 
+"s10" -> "s10"[label = "sn"]; 
+"s11" -> "s11"[label = "pm"]; 
+"s11" -> "s1"[label = "sn"]; 
+}]]></statespaceInDotFormat>
+  </dcrgModel>
+  <dcrgProperty name="property−condition−gm−dt">
+    <propertyResult>
+      <propertyType>DeadlockFree</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <propertyResult>
+      <propertyType>Liveness</propertyType>
+      <isValid>true</isValid>
+      <message></message>
+    </propertyResult>
+    <verificationStatistics>
+      <totalStateCount>4</totalStateCount>
+      <reachableStateCount>4</reachableStateCount>
+      <transitionsCount>16</transitionsCount>
+      <averageStateMemory>2.692 kb</averageStateMemory>
+      <totalStateMemory>10.770 kb</totalStateMemory>
+      <totalProgramMemory>9.515 mb</totalProgramMemory>
+    </verificationStatistics>
+    <statespaceInDotFormat><![CDATA[digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0" [ label = "s0{}"]; 
+"s1" [ label = "s1{}"]; 
+"s2" [ label = "s2{}"]; 
+"Er" [ label = "Er{}", color = red]; 
+"s0" -> "s1"[label = "dt"]; 
+"s0" -> "Er"[label = "gm", color = red ]; 
+"s0" -> "s0"[label = "pm"]; 
+"s0" -> "s0"[label = "sn"]; 
+"s1" -> "s1"[label = "dt"]; 
+"s1" -> "s2"[label = "gm"]; 
+"s1" -> "s1"[label = "pm"]; 
+"s1" -> "s1"[label = "sn"]; 
+"s2" -> "s2"[label = "dt"]; 
+"s2" -> "s2"[label = "gm"]; 
+"s2" -> "s2"[label = "pm"]; 
+"s2" -> "s2"[label = "sn"]; 
+"Er" -> "Er"[label = "pm", color = red ]; 
+"Er" -> "Er"[label = "sn", color = red ]; 
+"Er" -> "Er"[label = "gm", color = red ]; 
+"Er" -> "Er"[label = "dt", color = red ]; 
+}]]></statespaceInDotFormat>
+  </dcrgProperty>
+  <dcrgComposite name="">
+    <propertyResult>
+      <propertyType>PropertyVerification</propertyType>
+      <isValid>false</isValid>
+      <message>The model does not satisfy the property due to voilations at the following  states! s4+Er;  s5+Er;  s6+Er;  s7+Er;  s8+Er;  s9+Er;  s10+Er;  </message>
+    </propertyResult>
+    <verificationStatistics>
+      <totalStateCount>48</totalStateCount>
+      <reachableStateCount>16</reachableStateCount>
+      <transitionsCount>48</transitionsCount>
+      <averageStateMemory>4.698 kb</averageStateMemory>
+      <totalStateMemory>75.172 kb</totalStateMemory>
+      <totalProgramMemory>7.158 mb</totalProgramMemory>
+    </verificationStatistics>
+    <statespaceInDotFormat><![CDATA[digraph DCRGraph{
+node [shape=ellipse, width=.25, height=.25]; 
+"s0+s0" [ label = "s0+s0{gm,sn}"]; 
+"s1+s0" [ label = "s1+s0{gm}"]; 
+"s2+s1" [ label = "s2+s1{gm,sn}"]; 
+"s3+s1" [ label = "s3+s1{gm}"]; 
+"s4+s2" [ label = "s4+s2{}"]; 
+"s4+Er" [ label = "s4+Er{}", color = red]; 
+"s5+s2" [ label = "s5+s2{sn}"]; 
+"s5+Er" [ label = "s5+Er{sn}", color = red]; 
+"s6+s2" [ label = "s6+s2{gm,sn}"]; 
+"s6+Er" [ label = "s6+Er{gm,sn}", color = red]; 
+"s7+s2" [ label = "s7+s2{gm}"]; 
+"s7+Er" [ label = "s7+Er{gm}", color = red]; 
+"s8+Er" [ label = "s8+Er{}", color = red]; 
+"s9+Er" [ label = "s9+Er{gm,sn}", color = red]; 
+"s10+Er" [ label = "s10+Er{gm}", color = red]; 
+"s11+s0" [ label = "s11+s0{gm,sn}"]; 
+"s0+s0" -> "s0+s0"[label = "pm"]; 
+"s0+s0" -> "s1+s0"[label = "sn"]; 
+"s1+s0" -> "s2+s1"[label = "dt"]; 
+"s1+s0" -> "s8+Er"[label = "gm", color = red ]; 
+"s1+s0" -> "s11+s0"[label = "pm"]; 
+"s1+s0" -> "s1+s0"[label = "sn"]; 
+"s2+s1" -> "s2+s1"[label = "pm"]; 
+"s2+s1" -> "s3+s1"[label = "sn"]; 
+"s3+s1" -> "s2+s1"[label = "dt"]; 
+"s3+s1" -> "s4+s2"[label = "gm"]; 
+"s3+s1" -> "s2+s1"[label = "pm"]; 
+"s3+s1" -> "s3+s1"[label = "sn"]; 
+"s4+s2" -> "s5+s2"[label = "dt"]; 
+"s4+s2" -> "s4+s2"[label = "gm"]; 
+"s4+s2" -> "s6+s2"[label = "pm"]; 
+"s4+s2" -> "s4+s2"[label = "sn"]; 
+"s4+Er" -> "s5+Er"[label = "dt", color = red ]; 
+"s4+Er" -> "s4+Er"[label = "gm", color = red ]; 
+"s4+Er" -> "s6+Er"[label = "pm", color = red ]; 
+"s4+Er" -> "s4+Er"[label = "sn", color = red ]; 
+"s5+s2" -> "s6+s2"[label = "pm"]; 
+"s5+s2" -> "s4+s2"[label = "sn"]; 
+"s5+Er" -> "s6+Er"[label = "pm", color = red ]; 
+"s5+Er" -> "s4+Er"[label = "sn", color = red ]; 
+"s6+s2" -> "s6+s2"[label = "pm"]; 
+"s6+s2" -> "s7+s2"[label = "sn"]; 
+"s6+Er" -> "s6+Er"[label = "pm", color = red ]; 
+"s6+Er" -> "s7+Er"[label = "sn", color = red ]; 
+"s7+s2" -> "s6+s2"[label = "dt"]; 
+"s7+s2" -> "s4+s2"[label = "gm"]; 
+"s7+s2" -> "s6+s2"[label = "pm"]; 
+"s7+s2" -> "s7+s2"[label = "sn"]; 
+"s7+Er" -> "s6+Er"[label = "dt", color = red ]; 
+"s7+Er" -> "s4+Er"[label = "gm", color = red ]; 
+"s7+Er" -> "s6+Er"[label = "pm", color = red ]; 
+"s7+Er" -> "s7+Er"[label = "sn", color = red ]; 
+"s8+Er" -> "s5+Er"[label = "dt", color = red ]; 
+"s8+Er" -> "s8+Er"[label = "gm", color = red ]; 
+"s8+Er" -> "s9+Er"[label = "pm", color = red ]; 
+"s8+Er" -> "s8+Er"[label = "sn", color = red ]; 
+"s9+Er" -> "s9+Er"[label = "pm", color = red ]; 
+"s9+Er" -> "s10+Er"[label = "sn", color = red ]; 
+"s10+Er" -> "s6+Er"[label = "dt", color = red ]; 
+"s10+Er" -> "s8+Er"[label = "gm", color = red ]; 
+"s10+Er" -> "s9+Er"[label = "pm", color = red ]; 
+"s10+Er" -> "s10+Er"[label = "sn", color = red ]; 
+"s11+s0" -> "s11+s0"[label = "pm"]; 
+"s11+s0" -> "s1+s0"[label = "sn"]; 
+}]]></statespaceInDotFormat>
+  </dcrgComposite>
+</dcrgVerificationResult>
