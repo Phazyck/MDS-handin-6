@@ -46,7 +46,7 @@ __*Post-execution:*__ Depending on which task manager file and property have bee
 
 ##The Improved Model
 
-__The though-process behind the improved model:__
+__The thought-process behind the improved model:__
 
 prescribe-medicine-extended.xml has one major flaw, it does not fulfill the 'liveness' property.
 We have come to the following conclusion as to why that is:
