@@ -12,7 +12,7 @@ All of these modules are then used by the TaskManagerVerifier, which can be util
 
 __*External dependencies:*__ This project has no external dependencies. All imported classes/packages are in the standard JDK.
 
-__*Screen dumps:*__ In the files folder, the input 
+__*Screen dumps:*__ In the files folder, all input and output from different runs is grouped in a very straightforward folder structure.
 
 
 ##Package Overview
