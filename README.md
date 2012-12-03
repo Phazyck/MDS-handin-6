@@ -12,6 +12,12 @@ __Brief descriptions of all the packages in the project:__
 
 Not yet ready...
 
+##The 'files' folder
+
+__The place where all the good stuff gathers:__ 
+
+Not yet ready...
+
 ##Execution
 
 __In order to execute and test this project, you should do the following:__
