@@ -5,7 +5,7 @@ MDS-handin-6
 
 ##Progress
 
-**Done:**
+**DONE:**
 - Extend task manager xml.
 - Create a Java client, 'VerificationClient.java',  for the VerificationService
 - Create a Java client for the TaskmanagerHelperService
