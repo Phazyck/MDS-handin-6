@@ -16,7 +16,30 @@ MDS-handin-6
 **TODO:**
 - Finish README.md.
 
-##Model Improvement
+##Introduction
+
+__Everything you need to know:__
+
+Empty...
+
+##Package Overview
+
+__Brief descriptions of all the packages in the project:__ 
+
+Empty...
+
+##Execution
+
+__In order to execute and test this project, you should do the following:__
+
+ - Run "ConsoleVerification.java".
+ - Follow the instructions provided in the console.
+
+
+##The Improved Model
+
+__The though-process behind the improved model:__
+
 prescribe-medicine-extended.xml has one major flaw, it does not fulfill the 'liveness' property.
 We have come to the following conclusion as to why that is:
 The given model has one single entry point, "order tests", since this task is the only one which does not have other tasks as its condition.
