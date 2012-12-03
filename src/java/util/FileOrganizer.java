@@ -24,7 +24,7 @@ public class FileOrganizer {
      */
     public FileOrganizer(File taskmanagerFile) {
         try {
-            this.path = taskmanagerFile.getParentFile().getCanonicalPath() + "\\";
+            this.path = taskmanagerFile.getParentFile().getCanonicalPath() + "/";
             String filename = taskmanagerFile.getName();
             this.prefix = filename.substring(0, filename.lastIndexOf('.'));
         } catch (Exception ex) {
