@@ -1,32 +1,16 @@
-MDS-handin-6
-============
-
-[__Formal Verification__](https://blog.itu.dk/SMDS-E2012/course-plan-and-curriculum/mandatory-assignment-6/)
-
-##Progress
-
-**DONE:**
-- Extend task manager xml.
-- Create a Java client, 'VerificationClient.java',  for the VerificationService
-- Create a Java client for the TaskmanagerHelperService
-- Port and update relevant serialization classes.
-- Fix live lock.
-- Specify a custom property.
-
-**TODO:**
-- Finish README.md.
+#[Mandatory Assignment 6: Formal Verification](https://blog.itu.dk/SMDS-E2012/course-plan-and-curriculum/mandatory-assignment-6/)
 
 ##Introduction
 
 __Everything you need to know:__
 
-Empty...
+Not yet ready...
 
 ##Package Overview
 
 __Brief descriptions of all the packages in the project:__ 
 
-Empty...
+Not yet ready...
 
 ##Execution
 
